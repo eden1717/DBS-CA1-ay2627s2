@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Update Review - HydroMax</title>
+    <link rel="stylesheet" href="/review/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">💧 HydroMax Shop</div>
+
+        <div class="nav-links">
+            <span>Welcome, <b id="navUsername"></b></span>
+            <a href="/product/retrieve/">Products</a>
+            <a href="/review/retrieve/all/">My Reviews</a>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h1>Update Review</h1>
+
+        <p class="subtitle">
+            Edit your rating and review.
+        </p>
+
+        <div id="message" class="message"></div>
+
+        <div class="card">
+
+            <h3 id="productName">Loading product...</h3>
+
+            <form id="updateForm">
+
+                <div class="form-group">
+
+                    <label>Your rating</label>
+
+                    <div class="stars">
+                        <button type="button" class="star"
+                                data-value="1" aria-label="1 star">★</button>
+                        <button type="button" class="star"
+                                data-value="2" aria-label="2 stars">★</button>
+                        <button type="button" class="star"
+                                data-value="3" aria-label="3 stars">★</button>
+                        <button type="button" class="star"
+                                data-value="4" aria-label="4 stars">★</button>
+                        <button type="button" class="star"
+                                data-value="5" aria-label="5 stars">★</button>
+                    </div>
+
+                    <input type="hidden" id="rating">
+                </div>
+
+                <div class="form-group">
+
+                    <label for="reviewText">Your review</label>
+
+                    <textarea id="reviewText"
+                              maxlength="1000"></textarea>
+
+                    <div id="counter" class="counter"></div>
+
+                </div>
+
+                <div class="actions">
+
+                    <button type="submit" id="submitBtn" disabled>
+                        Save Changes
+                    </button>
+
+                    <a href="/review/retrieve/all/"
+                       class="btn btn-secondary">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>© HydroMax Shop | ST0525 Database Systems CA1</footer>
+
+    <script src="/review/common.js"></script>
+    <script src="/review/update/script.js"></script>
+
+</body>
+</html>

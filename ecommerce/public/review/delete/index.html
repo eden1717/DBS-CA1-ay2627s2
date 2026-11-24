@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Delete Review - HydroMax</title>
+    <link rel="stylesheet" href="/review/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">💧 HydroMax Shop</div>
+
+        <div class="nav-links">
+            <span>Welcome, <b id="navUsername"></b></span>
+            <a href="/product/retrieve/">Products</a>
+            <a href="/review/retrieve/all/">My Reviews</a>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h1>Delete Review</h1>
+
+        <p class="subtitle">
+            Confirm before permanently deleting your review.
+        </p>
+
+        <div id="message" class="message"></div>
+
+        <div class="warning">
+            <strong>Warning:</strong>
+            Deleting this review will also delete all associated
+            comments. This action cannot be undone.
+        </div>
+
+        <div class="card">
+
+            <h3 id="productName">Loading review...</h3>
+
+            <div id="reviewRating" class="rating-display"></div>
+
+            <p id="reviewText" class="review-text"></p>
+
+            <div class="actions">
+
+                <button id="deleteBtn"
+                        class="btn-danger" disabled>
+                    Confirm Delete
+                </button>
+
+                <a href="/review/retrieve/all/"
+                   class="btn btn-secondary">
+                    Cancel
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>© HydroMax Shop | ST0525 Database Systems CA1</footer>
+
+    <script src="/review/common.js"></script>
+    <script src="/review/delete/script.js"></script>
+
+</body>
+</html>
